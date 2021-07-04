@@ -52,7 +52,10 @@ class QuestionsController < ApplicationController
 
     def update
         # update controller
-        raise params.inspect
+        # raise params.inspect
+        @question = Question.find(params[:id])
+        @question.update(post_params)
+        redirect_to question_show_path(@question)
     end
 
 

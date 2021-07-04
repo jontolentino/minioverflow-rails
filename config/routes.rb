@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   post '/questions' => 'questions#new_create'
   get '/questions/p/:id' => 'questions#show', as: 'question_show'
   get '/questions/p/:id/edit' => 'questions#edit', as: 'questions_editing'
-  patch '/questions/p/:id' => 'questions#update'
+  patch '/questions/p/:id' => 'questions#update', as: 'question_update'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
