@@ -53,7 +53,7 @@ class QuestionsController < ApplicationController
     end
 
     def delete
-        Person.find(params[:id]).destroy
+        Question.find(params[:id]).destroy
         redirect_to question_index_path
     end
 

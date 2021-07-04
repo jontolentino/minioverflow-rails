@@ -10,7 +10,7 @@
             <%= link_to questions_editing_path(@question.id) do %>
             <div class="edit-button q-button">Edit</div>
             <% end %>
-            <%= link_to question_delete_path(@question.id), data: {confirm: "Delete this question?"} do %>
+            <%= link_to question_delete_path(@question.id),method: :delete, data: {confirm: "Delete this question?"} do %>
             <div class="delete-button q-button">Delete</div>
             <% end %>
         </div>
