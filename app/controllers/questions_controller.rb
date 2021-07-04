@@ -49,7 +49,7 @@ class QuestionsController < ApplicationController
         # raise params.inspect
         @question = Question.find(params[:id])
         @question.update(post_params)
-        redirect_to question_show_path(@question)
+        redirect_to question_show_path(@question), alert: "Question Updated"
     end
 
     def delete
