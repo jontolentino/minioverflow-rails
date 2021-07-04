@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get '/questions/p/:id' => 'questions#show', as: 'question_show'
   get '/questions/p/:id/edit' => 'questions#edit', as: 'questions_editing'
   patch '/questions/p/:id' => 'questions#update', as: 'question_update'
+  delete 'questions/p/:id' => 'questions#delete', as: 'question_delete'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
