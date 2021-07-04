@@ -2,7 +2,7 @@
       <h2>Edit Question</h2>
 <%# FORM HERE %>
 
-        <%= form_with model: @question,scope: :question, url: "/questions/p/:id", method: :post, local: true do |form| %>
+        <%= form_with model: @question,scope: :question, url: question_update_path(@question.id), method: :patch, local: true do |form| %>
         <%= form.label :title, "Title", class: "form-label-new" %><br>
         <%= form.text_field :title %><br>
 
