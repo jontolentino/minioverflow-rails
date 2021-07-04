@@ -6,16 +6,16 @@
         <p><%= @question.content %></p>
         </div>
 
-        <%= link_to question_show_path(question.id) do %>
         <div class="question-menus">
-            <%= link_to questions_editing_path(question.id) do %>
-            <div class="edit-button">Edit</div>
+            <%= link_to questions_editing_path(@question.id) do %>
+            <div class="edit-button q-button">Edit</div>
             <% end %>
-            <%= link_to questions_editing_path(question.id) do %>
-            <div class="delete-button">Delete</div>
+            <%= link_to question_delete_path(@question.id), data: {confirm: "Delete this question?"} do %>
+            <div class="delete-button q-button">Delete</div>
             <% end %>
         </div>
+    
         
-        <% end %>
+        
 
 </div>

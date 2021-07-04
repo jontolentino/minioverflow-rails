@@ -71,3 +71,22 @@ a{
     border-radius: 5px;
     border: 2px solid rgb(230, 230, 230);
 }
+
+.question-menus{
+    display: flex;
+    flex-direction: row;
+}
+
+.q-button{
+    padding: 10px;
+    border: 2px solid rgb(230, 230, 230);
+    width: 100px;
+}
+
+.edit-button{
+    background-color: #fbffc1;
+}
+
+.delete-button{
+    background-color: #ffd5c1;
+}
