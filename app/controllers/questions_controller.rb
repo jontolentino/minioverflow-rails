@@ -45,6 +45,16 @@ class QuestionsController < ApplicationController
 
     end
 
+    def edit
+        # edit controlerr
+        @question = Question.find(params[:id])
+    end
+
+    def update
+        # update controller
+        raise params.inspect
+    end
+
 
     private
     def post_params
