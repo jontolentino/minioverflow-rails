@@ -37,12 +37,6 @@ class QuestionsController < ApplicationController
 
     def show
         @question = Question.find(params[:id])
-        # if Question.find(params[:id]).present?
-        #     @question
-        # else
-        #     render "new"
-        # end
-
     end
 
     def edit
@@ -58,6 +52,10 @@ class QuestionsController < ApplicationController
         redirect_to question_show_path(@question)
     end
 
+    def delete
+        Person.find(params[:id]).destroy
+        redirect_to question_index_path
+    end
 
     private
     def post_params
