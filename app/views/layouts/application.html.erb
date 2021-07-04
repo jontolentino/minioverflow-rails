@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestAppOne</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1 class="header-h1"><%= link_to "Mini Overflow", question_index_path %></h1>
+      <div class="menu">
+        <p><%= link_to "HTML", question_html_path %></p>
+        <p><%= link_to "CSS", question_css_path %></p>
+        <p><%= link_to "Javascript", question_javascript_path %></p>
+        <p><%= link_to "Ruby", question_ruby_path %></p>
+        <span><strong><%= link_to "Post a Question", question_new_path %></strong></span>
+      </div>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

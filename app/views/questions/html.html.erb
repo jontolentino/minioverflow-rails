@@ -1,0 +1,14 @@
+<div class="question_container">
+      <h2>Latest HTML Questions</h2>
+
+      <% @questions.each do |question| %>
+
+      <div class="item_container">
+            <p class="item_meta">Subject: <%= question.subject %> | Posted by: <%= question.name %></p>
+            <p class="item_title_qa"><%= question.title %></p>
+      </div>
+      <% end %>
+
+</div>
+
+

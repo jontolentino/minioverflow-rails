@@ -1,0 +1,23 @@
+<div class="question_new_container">
+      <h2>Post New Question</h2>
+<%# FORM HERE %>
+
+        <%= form_with model: @question,scope: :question, url: "/questions", method: :post, local: true do |form| %>
+        <%= form.label :title, "Title", class: "form-label-new" %><br>
+        <%= form.text_field :title %><br>
+
+        <%= form.label :content, "Content", class: "form-label-new" %><br>
+        <%= form.text_area :content, rows: 8 %><br>
+
+        <%= form.label :name, "Your Name", class: "form-label-new" %><br>
+        <%= form.text_field :name %><br>
+
+        <%= form.label :subject, "Subject", class: "form-label-new" %><br>
+        <%= form.select :subject, [["HTML"], ["CSS"], ["Javascript"], ["Ruby"]] %><br>
+
+        <%= form.submit "Submit", id: "form-create-new" %>     
+        <% end %>
+
+</div>
+
+
