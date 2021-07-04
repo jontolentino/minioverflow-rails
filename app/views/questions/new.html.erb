@@ -1,7 +1,6 @@
 <div class="question_new_container">
       <h2>Post New Question</h2>
 <%# FORM HERE %>
-
         <%= form_with model: @question,scope: :question, url: "/questions", method: :post, local: true do |form| %>
         <%= form.label :title, "Title", class: "form-label-new" %><br>
         <%= form.text_field :title %><br>
