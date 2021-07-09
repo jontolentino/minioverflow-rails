@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
     end
 
     def new
-        @questions = Question.new
+        @question = Question.new
     end
 
     def new_create

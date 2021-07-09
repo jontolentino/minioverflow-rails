@@ -1,7 +1,19 @@
 <div class="question_new_container">
       <h2>Post New Question</h2>
 <%# FORM HERE %>
-        <%= form_with model: @question,scope: :question, url: "/questions", method: :post, local: true do |form| %>
+      <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% @question.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+        <%= form_with model: @question,scope: :question, url: question_post_q_path, method: :post, local: true do |form| %>
         <%= form.label :title, "Title", class: "form-label-new" %><br>
         <%= form.text_field :title %><br>
 
